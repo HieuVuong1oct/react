@@ -1,0 +1,13 @@
+.calculator-button {
+    padding: 10px;
+    transition: none;
+  }
+  
+  .calculator-button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .calculator-button:active {
+    transform: none;
+  }
