@@ -21,7 +21,7 @@ export default class ContextComponent extends React.Component {
             <NumberContext.Provider 
             value={{
                 number:this.state.number,
-                update:this.updateNumber.bind(this),
+                update:this.updateNumber,
             }}
             >
             <NumberContext.Consumer>
@@ -41,7 +41,7 @@ class UpdateNumber extends React.Component{
     render(){
         return (
             <button onClick={() => {
-                console.log(this.context.update())
+               
             }}>
                 Update Number
             </button>
@@ -52,13 +52,18 @@ class UpdateNumber extends React.Component{
 UpdateNumber.contextType = NumberContext;
 
 class ShowNumber extends React.Component{
+    
     render(){
         return (
+            
             <p>
                 {this.context.number}
+               
             </p>
+            
         )
     }
+    
 }
 
 ShowNumber.contextType= NumberContext;
